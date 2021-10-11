@@ -4,8 +4,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `git clone https://github.com/rQ-Qr/arcade-token-tracking-system.git` to download to local. Run `npm install` to install modules after entering the project.
+Run `git clone https://github.com/rQ-Qr/arcade-token-tracking-system.git` to download to local.  
+Run `npm install` to install modules after entering the project.  
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Three additional features
+
+1.	Refund  
+User can require refund within one week of purchase.
+2.	Social Network  
+User can add friends in the app.
+3.	Authentication  
+User can login by Google OAuth, twitter OAuth, etc.
 
 ## Code scaffolding
 
