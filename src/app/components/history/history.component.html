@@ -1,0 +1,15 @@
+<div *ngIf="this.userService.user">
+  <div *ngFor="let transaction of this.userService.user.history"
+    class="card-panel grey teal lighten-2">
+      <!-- if token>0, this transaction is for purchasing tokens -->
+      <div *ngIf="transaction.token>0; else content">
+        {{this.userService.user.name}} purchased {{transaction.token}} tokens
+        for ${{transaction.token*0.25}} with the description “{{transaction.description}}”.
+      </div>
+      <!-- if token<=0, this transaction is for purchasing game -->
+      <ng-template #content>
+        {{this.userService.user.name}} has used {{-transaction.token}} tokens
+        with the description of “{{transaction.description}}”.
+      </ng-template>
+  </div>
+<div>

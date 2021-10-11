@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav-wrapper">
+    <a class="brand-logo">{{title}}</a>
+    <ul class="right hide-on-med-and-down">
+      <!-- toggle different components according login status -->
+      <div *ngIf="this.userService.user; else content">
+        <li>Balance: {{this.userService.user.balance}}</li>
+        <li><a (click)="logout()">Logout</a></li>
+      </div>
+      <ng-template #content>
+        <li><a (click)="login()">Login</a></li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

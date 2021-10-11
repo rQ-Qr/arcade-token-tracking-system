@@ -1,0 +1,10 @@
+<div>
+  <form>
+    <label>Please Input the Number of Tokens ($0.25/token): </label>
+    <!-- two-way data binding between tokens and value -->
+    <input name="number" [(ngModel)]="tokens" placeholder="{{tokens}}" >
+    <button class="waves-effect waves-light btn" (click) = "pay()">
+      Click to buy tokens
+    </button>
+  </form>
+</div>
